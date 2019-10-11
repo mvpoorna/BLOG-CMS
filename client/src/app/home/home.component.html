@@ -1,0 +1,23 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <mat-grid-list cols="3">
+    <mat-grid-tile *ngFor="let post of posts">
+      <mat-card class="example-card mat-elevation-z7 link" [routerLink]="['/details/', post._id]">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{post.postTitle}}</mat-card-title>
+          <mat-card-subtitle>{{post.updated | date :'dd-MMM-yy h:mm:ss a '}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <img mat-card-image src="{{post.postImgUrl}}" alt="{{post.postTitle}}">
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          {{post.postDesc | slice:0:200 }}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Structure */
+.example-container {
+  position: relative;
+  padding: 5px;
+}
+
+.example-table-container {
+  position: relative;
+  max-height: 400px;
+  overflow: auto;
+}
+
+.example-table th{
+  background: rgb(44, 155, 210);
+  color: #fff;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+}
+
+.link {
+  cursor: pointer;
+}
+.example-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-rate-limit-reached {
+  color: #980000;
+  max-width: 360px;
+  text-align: center;
+}
+.mat-grid-tile .mat-figure{
+  margin: 0px;
+}
+/* Column Widths */
+.mat-column-number,
+.mat-column-state {
+  max-width: 64px;
+}
+.mat-card-content{
+  margin-top: 13px;
+}
+.mat-grid-tile .mat-figure {
+  align-items: start !important;
+  margin-top: 16px !important;
+}
+.example-container {
+    box-shadow: none !important;
+}
+.example-header-image {
+  background-image: url('https://i0.wp.com/www.winhelponline.com/blog/wp-content/uploads/2017/12/user.png');
+  background-size: cover;
+}
+
+.mat-column-created {
+  max-width: 124px;
+}
+
+.mat-flat-button {
+  margin: 5px;
+}
+
+.example-container {
+  position: relative;
+  padding: 5px;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-full-width:nth-last-child(0) {
+  margin-bottom: 10px;
+}
+
+.button-row {
+  margin: 10px 0;
+}
+
+.mat-flat-button {
+  margin: 5px;
+}

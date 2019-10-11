@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+	<mat-toolbar-row>
+		<a mat-button routerLink="/home"><h2>BLOG-CMS</h2></a>
+		<span *ngIf="loginStatus === false"><a mat-button *ngFor="let cat of categories" [routerLink]="['/bycategory/', cat._id]">{{cat.catName}}</a></span>
+		<a mat-button *ngIf="loginStatus === true" [routerLink]="['/admin']">Home</a>
+		<a mat-button *ngIf="loginStatus === true" [routerLink]="['/category']">Category</a>
+		<a mat-button *ngIf="loginStatus === true" [routerLink]="['/post']">Post</a>
+		<span class="spacer"></span>
+		<a mat-button *ngIf="loginStatus === false" routerLink="/register">Register</a>
+		<a mat-button *ngIf="loginStatus === false" routerLink="/login">Login</a>
+		<a mat-button *ngIf="loginStatus === true" (click)="logout()">Logout</a>
+	</mat-toolbar-row>
+</mat-toolbar>
+<router-outlet></router-outlet>
